@@ -1,6 +1,6 @@
 import axios, { AxiosHeaders, InternalAxiosRequestConfig } from 'axios';
 
-const API = axios.create({ baseURL: process.env.NEXT_PUBLIC_API_URL });
+const API = axios.create({ 'baseURL': process.env.NEXT_PUBLIC_API_URL });
 
 API.interceptors.request.use(function (config: InternalAxiosRequestConfig) {
   if (!config) {
@@ -19,7 +19,7 @@ API.interceptors.request.use(function (config: InternalAxiosRequestConfig) {
 });
 
 API.interceptors.response.use(
-  async (config) => {
+  async config => {
     if (!config.data.result) {
       throw config.data;
     } else {
@@ -29,7 +29,7 @@ API.interceptors.response.use(
     }
     return config.data;
   },
-  (error) => Promise.reject(error.response.data),
+  error => Promise.reject(error.response.data),
 );
 
 export default API;

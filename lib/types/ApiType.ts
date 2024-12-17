@@ -30,4 +30,4 @@ export interface Dropdown {
 type MapData = {
   id: number;
   value: string;
-}
+};
