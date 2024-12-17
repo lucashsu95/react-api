@@ -1,0 +1,12 @@
+@import '@styles/base/variables';
+@import '@styles/base/extends';
+@import '@styles/base/mixin';
+
+.pageButton {
+  @extend %flex-center;
+  p {
+    font-size: $regularSize;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}

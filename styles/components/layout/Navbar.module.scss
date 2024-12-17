@@ -1,0 +1,77 @@
+@import '@styles/base/variables';
+@import '@styles/base/extends';
+@import '@styles/base/mixin';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 90vw;
+  height: 8vh;
+  padding: 0 5vw;
+  background-color: $mainColor;
+
+  @include X-Large {
+    height: 5vh;
+    padding: 10px 5vw;
+  }
+
+  section {
+    width: 25vw;
+    color: $fontColorWhite;
+    letter-spacing: 2px;
+    font-size: $titleSize;
+
+    .barButton {
+      cursor: pointer;
+
+      @include X-Large {
+        float: right;
+      }
+    }
+
+    .navLink {
+      display: flex;
+      justify-content: space-around;
+      font-size: $regularSize;
+
+      li {
+        @extend %flex-center;
+        height: fit-content;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $subColor;
+        }
+
+        a {
+          line-height: 5vh;
+          color: $fontColorWhite;
+          text-decoration: none;
+        }
+      }
+
+      .mainPoint {
+        background-color: #59a5d8;
+      }
+    }
+  }
+
+  .mainTitle {
+    @extend %flex-center;
+    justify-content: start;
+    width: 40vw;
+
+    @include X-Large {
+      justify-content: start;
+      width: 65vw;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+  }
+}

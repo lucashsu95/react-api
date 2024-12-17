@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 30vw;
+  margin-top: 3vh;
+  gap: 5vh;
+  font-size: large;
+
+  div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    input {
+      border: none;
+      background-color: #e9e9e9;
+      border-radius: 1rem;
+      padding: 6px 10px;
+      &:disabled {
+        background-color: #b8b5b5;
+      }
+    }
+
+    select,
+    option {
+      width: 200px;
+      border-radius: 1rem;
+      margin-top: 2px;
+    }
+  }
+
+  .oneColumn {
+    column-span: 2;
+  }
+
+  .btns {
+    border: none;
+    box-shadow: none;
+    justify-content: end;
+    gap: 15px;
+
+    button {
+      border: none;
+      border-radius: 0.5rem;
+      padding: 3px 10px;
+      color: #1b1a1a;
+      cursor: pointer;
+      font-size: medium;
+    }
+
+    .cancel {
+      background-color: #d9d9d9;
+      &:hover {
+        background-color: #b8b5b5;
+      }
+    }
+
+    .confirm {
+      background-color: #6096ba;
+      &:hover {
+        background-color: #407aa0;
+      }
+    }
+  }
+}

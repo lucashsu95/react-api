@@ -1,0 +1,98 @@
+@import '../base/extends';
+@import '../base/variables';
+@import '../base/mixin';
+.container {
+  h2 {
+    @extend %page-title;
+    font-size: 2rem;
+  }
+  .newBook {
+    display: flex;
+    justify-content: end;
+    button {
+      border: none;
+      border-radius: 0.5rem;
+      color: #1b1a1a;
+      background-color: #6096ba;
+      color: wheat;
+      padding: 5px 10px;
+      margin: 0 20vw;
+      margin-top: 3vh;
+      &:hover {
+        background-color: #407aa0;
+      }
+    }
+  }
+  .tabletitle {
+    width: 50vw;
+    margin: auto;
+    margin-top: 4vh;
+    .title {
+      font-size: $largeSize;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+      text-align: center;
+      padding-bottom: 10px;
+      color: $fontColor;
+      border-bottom: 1px solid $subColorGrey;
+    }
+    @include X-Large {
+      width: 60vw;
+    }
+    @include Large {
+      width: 75vw;
+    }
+    @include Medium {
+      width: 80vw;
+    }
+
+    @include Small {
+      width: 90vw;
+    }
+    @include X-Small {
+      width: 90vw;
+      margin: 0;
+      .text {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .date {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+    .btns {
+      button {
+        font-size: small;
+        border: none;
+        border-radius: 0.5rem;
+        color: #1b1a1a;
+        margin: 5px 0;
+        padding: 4px 10px;
+        cursor: pointer;
+      }
+
+      .edit {
+        background-color: #8fbe9a;
+        &:hover {
+          background-color: #68ac78;
+        }
+      }
+
+      .delete {
+        background-color: rgb(228, 92, 92);
+        margin-left: 8px;
+        &:hover {
+          background-color: rgb(214, 64, 64);
+        }
+      }
+    }
+  }
+}
